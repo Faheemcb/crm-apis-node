@@ -4,7 +4,7 @@ services:
   mongo:
     image: mongo
     restart: always
-    container_name: mongo-docker
+    container_name: mongodb-shell
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: mongoadmin
@@ -17,7 +17,7 @@ services:
         
   mongo-express:
     image: mongo-express
-    container_name: mongo-express
+    container_name: mongodb-compass
     restart: always
     ports:
       - "28081:8081"
@@ -30,16 +30,6 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://mongoadmin:mongoadmin@mongo:27017/ 
     depends_on:
       - mongo
-    networks:
-      - pfm
-  portainer:
-    image: portainer/portainer-ce
-    container_name: portainer
-    restart: always
-    ports:
-      - "9000:9000"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - pfm
 
