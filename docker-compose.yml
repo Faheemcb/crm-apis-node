@@ -33,6 +33,26 @@ services:
     networks:
       - pfm
 
+  keycloak:
+    networks:
+      - pfm
+    image: quay.io/keycloak/keycloak:20.0.3
+    container_name: keycloak
+    ports:
+      - 8080:8080
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_DB_URL_HOST=mongo-express
+
+      # - KEYCLOAK_FRONTEND_URL=http://65.1.3.244:8080/auth
+    volumes:
+      - "./keycloak/lead.json:/opt/keycloak/data/import/lead.json"
+    command: ["start-dev", "--import-realm"]
+    depends_on:
+      - mongo-express
+
+
 networks:
   pfm:
   
