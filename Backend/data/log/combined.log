@@ -1,0 +1,70 @@
+2024-05-24 13:44:01 [32minfo[39m new subscriber added : {
+  "$__": {
+    "activePaths": {
+      "paths": {
+        "legalName": "require",
+        "subscriberType": "require"
+      },
+      "states": {
+        "require": {
+          "legalName": true,
+          "subscriberType": true
+        },
+        "default": {},
+        "modify": {}
+      }
+    },
+    "op": null,
+    "saving": null,
+    "$versionError": null,
+    "saveOptions": null,
+    "validating": null,
+    "cachedRequired": {},
+    "backup": {
+      "activePaths": {
+        "modify": {
+          "subscriberType": true,
+          "legalName": true,
+          "address": true,
+          "place": true,
+          "phone": true,
+          "logoURL": true,
+          "website": true,
+          "taxNumber": true,
+          "nationalLabelIdValue": true,
+          "panNo": true,
+          "country": true,
+          "state": true,
+          "district": true,
+          "city": true,
+          "nationalIdLabel": true
+        },
+        "default": {
+          "_id": true
+        }
+      },
+      "validationError": null
+    },
+    "inserting": true,
+    "savedState": {}
+  },
+  "_doc": {
+    "subscriberType": "INDIVIDUAL",
+    "legalName": "string",
+    "address": "string",
+    "place": "string",
+    "phone": "string",
+    "logoURL": "string",
+    "website": "string",
+    "taxNumber": "string",
+    "nationalLabelIdValue": "string",
+    "panNo": "string",
+    "country": "string",
+    "state": "string",
+    "district": "string",
+    "city": "string",
+    "nationalIdLabel": "string",
+    "_id": "66504c49b809d225953b85b4"
+  },
+  "$isNew": false
+}

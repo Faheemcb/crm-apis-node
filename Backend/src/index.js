@@ -3,12 +3,13 @@ import cors from 'cors' //importing cors
 import dotenv from "dotenv";   // importing .env file
 import swaggerjsdoc from 'swagger-jsdoc' // importing swagger-jsdoc
 import swaggerui from 'swagger-ui-express' // imorting swagger-ui-express
-import connecttodatabase from './Config/Db.js' // importing connection to database
 import path , { dirname }  from 'path'; // importing path , dirname API'S from path module
 import NotFoundError from './Exceptions/NotFoundError.js' // importing Custom Error Handler
 import { fileURLToPath } from 'url'; // importing url module
 import {errorhandler} from "./Middleware/errorHandler.js"; // importing global error handler
-import leadRouter from "./Lead/Router.js"
+// import leadRouter from "./Lead/Router.js"
+import connecttoDB from "./config/Db.js";
+import subscriberrouter from './Subscriber/Router.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url)); // Configuring dirname path
 
@@ -22,7 +23,7 @@ dotenv.config({
 const app = express(); 
 
 app.use(cors())
-connecttodatabase() //connect to database
+connecttoDB()
 
 app.use(express.json()) //defining middleware
 
@@ -36,7 +37,7 @@ const swaggerDefinition = {
         },
     servers: [
         {
-            url: "http://localhost:7000"
+            url: "http://localhost:3001"
         },
     ],
     
@@ -46,7 +47,7 @@ const swaggerDefinition = {
 const options = {
     swaggerDefinition,
     apis: [
-        path.join(__dirname,"Lead","Router.js")
+        path.join(__dirname,"Subscriber","Router.js")
     ],
 };
 
@@ -60,7 +61,7 @@ app.use('/api-docs',swaggerui.serve,swaggerui.setup(swaggerspecs,{
 }));
 
 // Defining routes
-app.use('/api/v1',jobapplicationrouter) //configuring routes for job application module
+app.use('/api/v1',subscriberrouter)
 
 
 

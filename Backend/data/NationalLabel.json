@@ -1,0 +1,82 @@
+[
+    {
+      "name": "Social Security Number (SSN)",
+      "description": "The Social Security Number (SSN) is a nine-digit identification number issued to U.S. citizens, permanent residents, and temporary residents by the Social Security Administration. It serves as a unique identifier for tax purposes and accessing government benefits."
+    },
+    {
+      "name": "National Identification Number (NIN)",
+      "description": "The National Identification Number (NIN) is a unique identifier assigned to citizens and residents of many countries for various purposes such as taxation, social security, healthcare, and voting."
+    },
+    {
+      "name": "Citizen Service Number (CSN)",
+      "description": "The Citizen Service Number (CSN) is a unique identification number assigned to citizens of the Netherlands. It is used for interactions with government agencies, such as applying for benefits, taxes, and healthcare."
+    },
+    {
+      "name": "Personal Identification Number (PIN)",
+      "description": "The Personal Identification Number (PIN) is a numerical code used as a security measure to authenticate an individual's identity, typically in conjunction with other forms of identification such as a driver's license or passport."
+    },
+    {
+      "name": "Identity Card Number (ICN)",
+      "description": "The Identity Card Number (ICN) is a unique identifier found on national identity cards issued by many countries. It serves as proof of identity and may include biometric data such as fingerprints or facial recognition."
+    },
+    {
+      "name": "Taxpayer Identification Number (TIN)",
+      "description": "The Taxpayer Identification Number (TIN) is a unique identifier assigned to individuals and businesses for tax purposes. It is used by tax authorities to track financial transactions and ensure compliance with tax laws."
+    },
+    {
+      "name": "Driver's License Number",
+      "description": "The Driver's License Number is a unique identifier assigned to individuals who hold a valid driver's license issued by a government authority. It is used to verify identity and driving privileges."
+    },
+    {
+      "name": "Passport Number",
+      "description": "The Passport Number is a unique identifier assigned to an individual's passport, which is issued by their respective country's government for international travel purposes. It contains personal information and serves as proof of citizenship."
+    },
+    {
+      "name": "Residence Permit Number",
+      "description": "The Residence Permit Number is a unique identifier assigned to non-citizens residing legally in a country under a residence permit. It is used to track immigration status and grant permission for temporary or permanent residency."
+    },
+    {
+      "name": "Permanent Account Number (PAN)",
+      "description": "The Permanent Account Number (PAN) is a unique alphanumeric identifier assigned to individuals and entities in India for tax purposes. It is issued by the Income Tax Department and is used for financial transactions and tax filing."
+    },
+    {
+      "name": "Personal Public Service Number (PPS)",
+      "description": "The Personal Public Service Number (PPS) is a unique identifier assigned to individuals in Ireland for accessing social welfare benefits, healthcare, and other government services. It is issued by the Department of Social Protection."
+    },
+    {
+      "name": "Health Insurance Number (HIN)",
+      "description": "The Health Insurance Number (HIN) is a unique identifier assigned to individuals in some countries for accessing healthcare services and health insurance coverage. It is used to verify eligibility and track medical records."
+    },
+    {
+      "name": "Tax File Number (TFN)",
+      "description": "The Tax File Number (TFN) is a unique identifier assigned to individuals and entities in Australia for tax purposes. It is issued by the Australian Taxation Office and is used for reporting income, filing taxes, and accessing government services."
+    },
+    {
+      "name": "Civil Registry Number (CRN)",
+      "description": "The Civil Registry Number (CRN) is a unique identifier assigned to individuals in some countries for vital registration purposes, such as birth, marriage, and death records. It helps maintain accurate population data and track demographic trends."
+    },
+    {
+      "name": "Identity Document Number (IDN)",
+      "description": "The Identity Document Number (IDN) is a unique identifier found on various forms of identity documents, such as national ID cards, passports, and driver's licenses. It serves as proof of identity and may include biometric data for authentication."
+    },
+    {
+      "name": "Unified Social Credit Code (USCC)",
+      "description": "The Unified Social Credit Code (USCC) is a unique identifier assigned to businesses and organizations in China for regulatory and administrative purposes. It is used for business registration, taxation, and credit monitoring."
+    },
+    {
+      "name": "Employee Identification Number (EIN)",
+      "description": "The Employee Identification Number (EIN), also known as the Employer Identification Number, is a unique identifier assigned to businesses and nonprofit organizations in the United States for tax purposes. It is issued by the Internal Revenue Service."
+    },
+    {
+      "name": "Alien Registration Number (ARN)",
+      "description": "The Alien Registration Number (ARN) is a unique identifier assigned to non-citizens residing in the United States under a temporary visa or green card. It is used for immigration tracking and employment authorization."
+    },
+    {
+      "name": "National Insurance Number (NINO)",
+      "description": "The National Insurance Number (NINO) is a unique identifier assigned to individuals in the United Kingdom for social security and tax purposes. It is used to track contributions to the National Insurance system and eligibility for benefits."
+    },
+    {
+      "name": "Social Security and Housing Fund Number (SSFN)",
+      "description": "The Social Security and Housing Fund Number (SSFN) is a unique identifier assigned to individuals in Singapore for social security and housing benefits. It is used to track contributions to the Central Provident Fund (CPF) and eligibility for public housing."
+    }
+  ]
