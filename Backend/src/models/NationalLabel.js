@@ -6,7 +6,7 @@ const nationalIdLabelSchema = new Schema (
             type: String,
             required: true
         }
-    }
+    }, { versionKey: false }
 )
 
 const collectionName = "NationalIdLabel"

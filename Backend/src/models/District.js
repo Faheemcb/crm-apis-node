@@ -10,7 +10,7 @@ const districtSchema = new Schema (
             type: Schema.Types.ObjectId,
             ref: 'State'
         }
-    }
+    }, { versionKey: false }
 )
 
 const collectionName = "District"

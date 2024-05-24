@@ -1,140 +1,94 @@
 import mongoose from 'mongoose'
 import logger from '../Middleware/Logger.js'
+import countryjson from '../../data/Country.json' assert{type:'json'}
+import statejson from '../../data/State.json' assert{type:'json'}
+import districtjson from '../../data/District.json' assert{type:'json'}
+import cityjson from '../../data/City.json' assert{type:'json'}
+import nationallabeljson from '../../data/NationalLabel.json' assert{type:'json'}
+import Country from '../models/Country.js'
+import State from '../models/State.js'
+import District from '../models/District.js'
+import City from '../models/City.js'
+import NationalIdLabel from '../models/NationalLabel.js'
 
 const connecttoDB = ()=>{
     mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true })
     mongoose.connection.on("connected",async()=>{
-        console.log("MongoDB Connected Successfully");
+        logger.info("MongoDB Connected Successfully");
+        await insertcountry()
+        await insertstate()
+        await insertdistrict()
+        await insertcity()
+        await insertnationallabel()
     })
         mongoose.connection.on("error", (err) => {
-        console.error("Error while connecting to database: " + err);
-    });
-
-    mongoose.connection.on("disconnected", () => {
-        console.warn("MongoDB connection disconnected");
-    });
-}
-
-export default connecttoDB
-
-import mongoose from 'mongoose' //importing mongoose
-import logger from '../middleware/logger.js' // importing logger
-import JobCategoryModel from '../models/JobCategoryModel.js' // importing job category model
-import locationModel from '../models/LocationModel.js' // importing location model
-import jobcategory from '../../data/JobCategory.json' assert{type:'json'} //importing job category json data
-import location from '../../data/Location.json' assert{type: 'json'}// importing location json data
-import skillmodel from '../models/SkillModel.js'
-import Qualificationmodel from '../models/QualificationModel.js'
-import skill from '../../data/Skill.json' assert{type: 'json'}
-import qualification from '../../data/Qualification.json' assert{type: 'json'}
-import Industry from '../models/IndustryModel.js'
-import industryData from '../../data/Industry.json' assert{type: 'json'}
-import JobTitle from '../models/JobTitle.js'
-import jobtitle from '../../data/JobTitle.json' assert{type:'json'}
- 
-
-
-//to establish connect to database
-const connectToDatabase = () => {
-    // mongoose connection setup
-    mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
-
-    mongoose.connection.on("connected", async() => {
-        logger.info("🍀 MongoDB Connected Successfully");
-        await insertIndustryData()
-        await insertLocationData()
-        await insertcategorydata()
-        await insertskillsdata()
-        await insertjobtitledata()
-        await insertqualificationsdata()
-    });
-
-    mongoose.connection.on("error", (err) => {
         logger.error("Error while connecting to database: " + err);
     });
 
     mongoose.connection.on("disconnected", () => {
         logger.warn("MongoDB connection disconnected");
     });
-};
-
-
-//importing json data
-const insertcategorydata = async()=>{
-    try {
-        const existingdata = await JobCategoryModel.find()
-        if (existingdata.length === 0) {
-            await JobCategoryModel.insertMany(jobcategory)
-            logger.info("job_category added successfully")
-        }
-
-    } catch (error) {
-        logger.error("error inserting data")
-    }
 }
 
+export default connecttoDB
 
-const insertLocationData = async() => {
-    try {
-        const data = await locationModel.find()
-        if (data.length === 0) {
-            await locationModel.insertMany(location)
-            logger.info("Location data added")
-        }
-    } catch (error) {
-        logger.error("Error while Inserting Data")
-        
-    }
-}
 
-const insertskillsdata = async()=>{
+const insertcountry = async()=>{
     try {
-        const existingdata = await skillmodel.find()
+        const existingdata = await Country.find()
         if (existingdata.length === 0) {
-            await skillmodel.insertMany(skill)
-            logger.info("skills added successfully")
-        }
-
-    } catch (error) {
-        logger.error("error inserting data")
-    }
-}
-
-const insertqualificationsdata = async()=>{
-    try {
-        const existingdata = await Qualificationmodel.find()
-        if (existingdata.length === 0) {
-            await Qualificationmodel.insertMany(qualification)
-            logger.info("qualifications added successfully")
-        }
-
-    } catch (error) {
-        logger.error("error inserting data")
-    }
-}
-
-const insertjobtitledata = async()=>{
-    try {
-        const existingdata = await JobTitle.find()
-        if (existingdata.length === 0) {
-            await JobTitle.insertMany(jobtitle)
-            logger.info("jobtitle added successfully")
+            await Country.insertMany(countryjson)
+            logger.info("Country added successfully")
         }
     } catch (error) {
         logger.error("error inserting data")
     }
 }
 
-const insertIndustryData = async() => {
+const insertstate = async()=>{
     try {
-        const existingData = await Industry.find()
-        if (existingData.length === 0) {
-            await Industry.insertMany(industryData)
-            logger.info("Industry added successfull")
+        const existingdata = await State.find()
+        if (existingdata.length === 0) {
+            await State.insertMany(statejson)
+            logger.info("State added successfully")
         }
     } catch (error) {
-        logger.error("Error while loading data")
+        logger.error("error inserting data")
     }
 }
 
-export default connectToDatabase
+const insertdistrict = async()=>{
+    try {
+        const existingdata = await District.find()
+        if (existingdata.length === 0) {
+            await District.insertMany(districtjson)
+            logger.info("District added successfully")
+        }
+    } catch (error) {
+        logger.error("error inserting data")
+    }
+}
+
+const insertcity = async()=>{
+    try {
+        const existingdata = await City.find()
+        if (existingdata.length === 0) {
+            await City.insertMany(cityjson)
+            logger.info("City added successfully")
+        }
+    } catch (error) {
+        logger.error("error inserting data")
+    }
+}
+
+const insertnationallabel = async()=>{
+    try {
+        const existingdata = await NationalIdLabel.find()
+        if (existingdata.length === 0) {
+            await NationalIdLabel.insertMany(nationallabeljson)
+            logger.info("NationalIdLabel added successfully")
+        }
+    } catch (error) {
+        logger.error("error inserting data")
+    }
+}

@@ -6,7 +6,7 @@ const countrySchema = new Schema (
             type: String,
             required: true
         }
-    }
+    }, { versionKey: false }
 )
 
 const collectionName = "Country"

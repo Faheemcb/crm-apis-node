@@ -14,7 +14,7 @@ const citySchema = new Schema (
             type: Schema.Types.ObjectId,
             ref: 'Country'
         }
-    }
+    }, { versionKey: false }
 )
 
 const collectionName = "City"
