@@ -16,7 +16,8 @@ const productSchema = new Schema(
             type: String
         },
         subscriberId: {
-            type: String
+            type: Schema.Types.ObjectId,
+            ref: "Subscriber"
         }
     }
 )
