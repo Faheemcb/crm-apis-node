@@ -1,42 +1,32 @@
 [
     {
-      "name": "Central District",
-      "description": "The Central District is the heart of the capital city, bustling with activity, commercial centers, and cultural landmarks. It is home to many government buildings, corporate headquarters, and iconic monuments."
+      "districtLabel": "Central District"
     },
     {
-      "name": "Riverside District",
-      "description": "The Riverside District is characterized by its scenic riverfront, parks, and recreational facilities. It is a popular spot for outdoor activities such as boating, picnicking, and cycling."
+      "districtLabel": "Riverside District"
     },
     {
-      "name": "Greenwood District",
-      "description": "The Greenwood District is known for its lush greenery, residential neighborhoods, and community amenities. It offers a serene environment away from the hustle and bustle of the city."
+      "districtLabel": "Greenwood District"
     },
     {
-      "name": "Tech Hub District",
-      "description": "The Tech Hub District is a vibrant area known for its concentration of technology companies, startups, and innovation hubs. It is a magnet for entrepreneurs, tech enthusiasts, and investors."
+      "districtLabel": "Tech Hub District"
     },
     {
-      "name": "Historic Quarter District",
-      "description": "The Historic Quarter District is a treasure trove of historical sites, museums, and heritage buildings. It offers visitors a glimpse into the rich cultural heritage and architectural legacy of the region."
+      "districtLabel": "Historic Quarter District"
     },
     {
-      "name": "Waterfront District",
-      "description": "The Waterfront District is a lively waterfront area lined with restaurants, cafes, and entertainment venues. It offers stunning views of the harbor and is a popular destination for dining and nightlife."
+      "districtLabel": "Waterfront District"
     },
     {
-      "name": "Industrial Zone District",
-      "description": "The Industrial Zone District is a key industrial area characterized by factories, warehouses, and logistics centers. It plays a crucial role in the economy by supporting manufacturing and distribution activities."
+      "districtLabel": "Industrial Zone District"
     },
     {
-      "name": "University District",
-      "description": "The University District is home to several universities, research institutions, and educational facilities. It is a hub of learning and innovation, attracting students, academics, and intellectuals from around the world."
+      "districtLabel": "University District"
     },
     {
-      "name": "Arts and Culture District",
-      "description": "The Arts and Culture District is a vibrant hub of artistic expression, featuring theaters, galleries, and performance venues. It celebrates creativity and diversity through various cultural events and exhibitions."
+      "districtLabel": "Arts and Culture District"
     },
     {
-      "name": "Commercial Center District",
-      "description": "The Commercial Center District is a bustling commercial hub with shopping malls, retail outlets, and business complexes. It is a shopping paradise and a major destination for shoppers and tourists."
+      "districtLabel": "Commercial Center District"
     }
   ]
