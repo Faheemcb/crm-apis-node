@@ -3,13 +3,16 @@ import mongoose , {Schema} from "mongoose";
 const leadSchema = new Schema(
     {
         subscriberId: {
-            type: String
+            type: Schema.Types.ObjectId,
+            ref: "Subscriber"
         },
         businessContactId: {
-            type: String
+            type: Schema.Types.ObjectId,
+            ref: "BusinessContact"
         },
         userId: {
-            type: String
+            type: Schema.Types.ObjectId,
+            ref: "User"
         },
         leadEvent: {
             type: Array
