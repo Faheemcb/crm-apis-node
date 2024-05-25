@@ -11,6 +11,8 @@ import {errorhandler} from "./Middleware/errorHandler.js"; // importing global e
 import connecttoDB from "./config/Db.js";
 import subscriberrouter from './Subscriber/Router.js'
 import userrouter from './User/Router.js'
+import countryRouter from "./Country/Router.js"
+import stateRouter from "./State/Router.js"
 
 const __dirname = dirname(fileURLToPath(import.meta.url)); // Configuring dirname path
 
@@ -49,7 +51,11 @@ const options = {
     swaggerDefinition,
     apis: [
         path.join(__dirname,"Subscriber","Router.js"),
-        path.join(__dirname,"User","Router.js")
+        path.join(__dirname,"User","Router.js"),
+        path.join(__dirname,"Country","Router.js"),
+        path.join(__dirname,"State","Router.js")
+
+
 
     ],
 };
@@ -64,7 +70,7 @@ app.use('/api-docs',swaggerui.serve,swaggerui.setup(swaggerspecs,{
 }));
 
 // Defining routes
-app.use('/api/v1',subscriberrouter,userrouter)
+app.use('/api/v1',subscriberrouter,userrouter,countryRouter,stateRouter)
 
 
 
