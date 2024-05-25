@@ -7,15 +7,19 @@ const router = express.Router();
  * @swagger
  *  components:
  *      schemas:
- *          State:
+ *          City:
  *              type: object
  *              required:
- *                  - stateLabel
+ *                  - cityLabel
+ *                  - stateId
  *                  - countryId
  *              properties:
- *                  stateLabel:
+ *                  cityLabel:
  *                      type: string
- *                      description: state name
+ *                      description: city name
+ *                  stateId:
+ *                      type: string
+ *                      description: state id
  *                  countryId:
  *                      type: string
  *                      description: country id
@@ -23,28 +27,28 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/v1/state:
+ * /api/v1/city:
  *  post:
- *      summary: Create new state
- *      description: This API is used to create a new state
+ *      summary: Create new city
+ *      description: This API is used to create a new city
  *      tags:
- *          - State
+ *          - City
  *      requestBody:
  *          required: true
  *          content:
  *              application/json:
  *                  schema:
- *                      $ref: '#/components/schemas/State'
+ *                      $ref: '#/components/schemas/City'
  *      responses:
  *          201:
- *              description: state created successfully
+ *              description: City created successfully
  *              content:
  *                  application/json:
  *                      schema:
- *                          $ref: '#/components/schemas/State'
+ *                          $ref: '#/components/schemas/City'
  *          400:
  *              description: Bad request, check the request body
  */
-router.post('/state', controller.createNewState); 
+router.post('/city', controller.createNewCity); 
 
 export default router;

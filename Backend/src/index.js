@@ -13,6 +13,8 @@ import subscriberrouter from './Subscriber/Router.js'
 import userrouter from './User/Router.js'
 import countryRouter from "./Country/Router.js"
 import stateRouter from "./State/Router.js"
+import districtRouter from "./District/Router.js"
+import cityRouter from "./City/Router.js"
 
 const __dirname = dirname(fileURLToPath(import.meta.url)); // Configuring dirname path
 
@@ -53,7 +55,11 @@ const options = {
         path.join(__dirname,"Subscriber","Router.js"),
         path.join(__dirname,"User","Router.js"),
         path.join(__dirname,"Country","Router.js"),
-        path.join(__dirname,"State","Router.js")
+        path.join(__dirname,"State","Router.js"),
+        path.join(__dirname,"District","Router.js"),
+        path.join(__dirname,"City","Router.js")
+
+
 
 
 
@@ -70,7 +76,7 @@ app.use('/api-docs',swaggerui.serve,swaggerui.setup(swaggerspecs,{
 }));
 
 // Defining routes
-app.use('/api/v1',subscriberrouter,userrouter,countryRouter,stateRouter)
+app.use('/api/v1',subscriberrouter,userrouter,countryRouter,stateRouter,districtRouter,cityRouter)
 
 
 

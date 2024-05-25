@@ -7,44 +7,44 @@ const router = express.Router();
  * @swagger
  *  components:
  *      schemas:
- *          State:
+ *          District:
  *              type: object
  *              required:
- *                  - stateLabel
- *                  - countryId
+ *                  - districtLabel
+ *                  - stateId
  *              properties:
- *                  stateLabel:
+ *                  districtLabel:
  *                      type: string
- *                      description: state name
- *                  countryId:
+ *                      description: district name
+ *                  stateId:
  *                      type: string
- *                      description: country id
+ *                      description: state id
  */
 
 /**
  * @swagger
- * /api/v1/state:
+ * /api/v1/district:
  *  post:
- *      summary: Create new state
- *      description: This API is used to create a new state
+ *      summary: Create new district
+ *      description: This API is used to create a new district
  *      tags:
- *          - State
+ *          - District
  *      requestBody:
  *          required: true
  *          content:
  *              application/json:
  *                  schema:
- *                      $ref: '#/components/schemas/State'
+ *                      $ref: '#/components/schemas/District'
  *      responses:
  *          201:
- *              description: state created successfully
+ *              description: district created successfully
  *              content:
  *                  application/json:
  *                      schema:
- *                          $ref: '#/components/schemas/State'
+ *                          $ref: '#/components/schemas/District'
  *          400:
  *              description: Bad request, check the request body
  */
-router.post('/state', controller.createNewState); 
+router.post('/district', controller.createNewDistrict); 
 
 export default router;
