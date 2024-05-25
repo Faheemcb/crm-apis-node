@@ -62,7 +62,7 @@ const router = express.Router();
  *                      description: ObjectId of the city
  *                  nationalLabelId:
  *                      type: string
- *                      description: ObjectId of the national label
+ *                      description: ObjectId of the national label 
  */
 
 /**
